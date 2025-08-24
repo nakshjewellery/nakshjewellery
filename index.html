@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Handmade Terracotta Jewellery</title>
+  <style>
+    :root{
+      --accent:#a0522d;
+      --bg:#f8f2ea;
+      --text:#333;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    header{
+      background:var(--accent);
+      color:#fff;
+      text-align:center;
+      padding:28px 18px;
+    }
+    header h1{margin:0;font-size:2.2rem;letter-spacing:1px}
+    header p{margin:6px 0 14px}
+    header img{
+      width:min(1100px,92%);
+      height:auto;
+      border-radius:12px;
+      display:block;
+      margin:0 auto;
+    }
+
+    table{
+      width:92%;
+      margin:36px auto;
+      border-collapse:collapse;
+      background:#fff;
+      box-shadow:0 4px 10px rgba(0,0,0,.08);
+      border-radius:12px;
+      overflow:hidden;
+    }
+    thead th{
+      background:#ffe0cc;
+      color:#5c2d14;
+      padding:14px 10px;
+      text-align:left;
+      font-weight:700;
+    }
+    td{
+      border-top:1px solid #eee;
+      padding:18px 14px;
+      vertical-align:top;
+    }
+    td img{
+      width:200px;
+      max-width:100%;
+      border-radius:10px;
+      display:block;
+    }
+    td strong{
+      color:var(--accent);
+      font-size:1.1rem;
+      display:block;
+      margin-bottom:6px;
+    }
+    .price{font-weight:700}
+    .email a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:700;
+      word-break:break-all;
+    }
+    .buy-btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:9px 16px;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:700;
+    }
+    .buy-btn:hover{filter:brightness(.9)}
+
+    footer{
+      background:var(--accent);
+      color:#fff;
+      text-align:center;
+      padding:18px;
+      margin-top:36px;
+      font-size:1rem;
+    }
+
+    /* ---------- Mobile (stacked cards) ---------- */
+    @media (max-width: 768px){
+      thead{display:none}
+      table, tbody, tr, td{display:block;width:100%}
+      tr{
+        margin:14px 0;
+        background:#fff;
+        border-radius:12px;
+        box-shadow:0 2px 8px rgba(0,0,0,.08);
+        padding:12px 14px;
+        border:1px solid #eee;
+      }
+      td{
+        border:none;
+        padding:8px 0;
+        display:flex;
+        gap:10px;
+      }
+      td[data-label]:before{
+        content: attr(data-label) ": ";
+        flex:0 0 110px;
+        color:#6a3a20;
+        font-weight:700;
+      }
+      td:first-child{
+        display:block;
+      }
+      td:first-child:before{content:""}
+      td img{margin:0 auto 6px}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Handmade Terracotta Jewellery</h1>
+    <p>Eco-Friendly • Unique • Crafted with Love</p>
+    <img src="images/banner.png" alt="Terracotta Jewellery Banner" />
+  </header>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Description</th>
+        <th>Price (₹)</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 7.50.11 AM.jpeg" alt="Handmade Necklace Set (Red & Green)"/></td>
+        <td data-label="Description">
+          <strong>Handmade Necklace Set (Red & Green)</strong>
+          A vibrant terracotta necklace set with a bold red and green pendant, paired with matching earrings. Perfect for ethnic wear, festivals, and cultural occasions. Lightweight, eco-friendly, and handcrafted with love.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Handmade%20Necklace%20Set%20(Red%20%26%20Green)&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Handmade%20Necklace%20Set%20(Red%20%26%20Green).%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 7.50.34 AM.jpeg" alt="Terracotta Jhumka Earrings (Red & Golden)"/></td>
+        <td data-label="Description">
+          <strong>Terracotta Jhumka Earrings (Red & Golden)</strong>
+          Classic round jhumkas with intricate hand-painted detailing in red and gold. The natural terracotta finish gives it an earthy, elegant look. Ideal for daily wear or festive outfits.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Terracotta%20Jhumka%20Earrings%20(Red%20%26%20Golden)&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Terracotta%20Jhumka%20Earrings%20(Red%20%26%20Golden).%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 7.50.47 AM.jpeg" alt="Mirror Work Necklace Set (Yellow & Orange)"/></td>
+        <td data-label="Description">
+          <strong>Mirror Work Necklace Set (Yellow & Orange)</strong>
+          Bright and cheerful handmade necklace with mirror work and terracotta beads. The sunny shades of yellow and orange make it a perfect accessory for haldi ceremonies, festive gatherings, or casual wear.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Mirror%20Work%20Necklace%20Set%20(Yellow%20%26%20Orange)&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Mirror%20Work%20Necklace%20Set%20(Yellow%20%26%20Orange).%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 7.51.18 AM.jpeg" alt="Colorful Round Pendant Necklace"/></td>
+        <td data-label="Description">
+          <strong>Colorful Round Pendant Necklace</strong>
+          A playful design featuring a large round pendant decorated with multiple colors. This handmade terracotta piece adds a pop of charm to simple kurtis and sarees. Comes with matching earrings.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Colorful%20Round%20Pendant%20Necklace&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Colorful%20Round%20Pendant%20Necklace.%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 7.51.19 AM.jpeg" alt="Beaded Terracotta Necklace Set (Red & Black)"/></td>
+        <td data-label="Description">
+          <strong>Beaded Terracotta Necklace Set (Red & Black)</strong>
+          Elegant black beads combined with a bold red pendant create a striking look. A versatile terracotta jewellery set that blends traditional and modern styles.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Beaded%20Terracotta%20Necklace%20Set%20(Red%20%26%20Black)&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Beaded%20Terracotta%20Necklace%20Set%20(Red%20%26%20Black).%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 7.51.20 AM.jpeg" alt="Hexagon Pendant Necklace (Yellow & Green)"/></td>
+        <td data-label="Description">
+          <strong>Hexagon Pendant Necklace (Yellow & Green)</strong>
+          A unique hexagonal terracotta pendant with yellow and green highlights. Stylish, eco-friendly, and perfect for pairing with both traditional and Indo-western outfits.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Hexagon%20Pendant%20Necklace%20(Yellow%20%26%20Green)&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Hexagon%20Pendant%20Necklace%20(Yellow%20%26%20Green).%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 8.10.50 AM (2).jpeg" alt="Black & Green Pendant Necklace with Earrings"/></td>
+        <td data-label="Description">
+          <strong>Black & Green Pendant Necklace with Earrings</strong>
+          A statement necklace with a handcrafted pendant in black and green tones, paired with designer earrings. This lightweight terracotta jewellery set makes a bold style statement.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Black%20%26%20Green%20Pendant%20Necklace%20with%20Earrings&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Black%20%26%20Green%20Pendant%20Necklace%20with%20Earrings.%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 7.51.20 AM (1).jpeg" alt="Minimal Necklace Set (Purple & Black)"/></td>
+        <td data-label="Description">
+          <strong>Minimal Necklace Set (Purple & Black)</strong>
+          A sleek, minimal terracotta necklace with a purple pendant highlighted by black detailing. Ideal for those who prefer subtle elegance in their jewellery.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Minimal%20Necklace%20Set%20(Purple%20%26%20Black)&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Minimal%20Necklace%20Set%20(Purple%20%26%20Black).%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-21 at 7.51.19 AM (1).jpeg" alt="Black Designer Necklace with Earrings"/></td>
+        <td data-label="Description">
+          <strong>Black Designer Necklace with Earrings</strong>
+          A bold, modern terracotta necklace in black with elegant beadwork and matching earrings. Perfect for evening functions, parties, and modern ethnic wear.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Black%20Designer%20Necklace%20with%20Earrings&body=Hello,%0A%0AI'd%20like%20to%20order%20the%20Black%20Designer%20Necklace%20with%20Earrings.%0APrice:%20%E2%82%B9300%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+
+      <tr>
+        <td data-label="Image"><img src="images/WhatsApp Image 2025-08-22 at 10.47.04 AM (1).jpeg" alt="Terracotta Jhumka Collection (Red, Silver & Blue)"/></td>
+        <td data-label="Description">
+          <strong>Terracotta Jhumka Collection (Red, Silver & Blue)</strong>
+          A set of handcrafted jhumka earrings in different colors — red, silver, and blue. Each pair is unique, lightweight, and ideal for mix-and-match with different outfits.
+          <br><a class="buy-btn" href="mailto:shrutidraval@gmail.com?subject=Order%20-%20Terracotta%20Jhumka%20Collection&body=Hello,%0A%0AI'd%20like%20to%20order%20a%20pair%20from%20the%20Terracotta%20Jhumka%20Collection.%0APrice:%20%E2%82%B9300%0AColour:%20Red%2FBlue%2FSilver%0AQuantity:%201%0A%0AThanks!">Buy / Contact</a>
+        </td>
+        <td data-label="Price (₹)" class="price">₹300</td>
+        <td data-label="Contact" class="email"><a href="mailto:shrutidraval@gmail.com">shrutidraval@gmail.com</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    Handmade with Love • Eco-Friendly • Unique
+  </footer>
+
+</body>
+</html>
