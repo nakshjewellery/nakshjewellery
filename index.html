@@ -128,36 +128,40 @@
     }
 
     /* ---------- Image Popup Modal ---------- */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      padding-top: 70px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background: rgba(0,0,0,0.85);
-    }
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,.6);
-    }
-    .modal-close {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      color: #fff;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .modal-close:hover {color: #ccc;}
+   .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.85); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  /* Centered Image */
+  .modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  }
+
+  /* Close Button */
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+  }
+  .modal-close:hover { color: #ccc; }
   </style>
 </head>
   <body>
@@ -398,30 +402,31 @@
 
 
 <script>
-    // Get modal elements
-    const modal = document.getElementById("imgModal");
-    const modalImg = document.getElementById("modalImg");
-    const closeBtn = document.querySelector(".modal-close");
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".modal-close");
 
-    // Attach click event to all images inside table
-    document.querySelectorAll("td img").forEach(img => {
-      img.addEventListener("click", () => {
-        modal.style.display = "block";
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
-      });
+  // Click image → show popup
+  document.querySelectorAll("td img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
     });
+  });
 
-    // Close modal on X click
-    closeBtn.onclick = () => { modal.style.display = "none"; };
+  // Close popup on X click
+  closeBtn.onclick = () => { modal.style.display = "none"; };
 
-    // Close modal on outside click
-    modal.onclick = (e) => {
-      if (e.target === modal) { modal.style.display = "none"; }
-    };
-  </script>
-</body>
+  // Close when clicking outside image
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+</script>
+  
+  </body>
 </html>
+
 
 
 
