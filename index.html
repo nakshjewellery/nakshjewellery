@@ -144,10 +144,13 @@
 
   /* Centered Image */
   .modal-content {
-    max-width: 90%;
-    max-height: 80vh;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+   margin: 5% auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    width: 50vw;         /* always 65% of viewport width */
+    max-width: 100%;     /* never exceed screen width */
+    height: 50vw;        /* maintain aspect ratio */
   }
 
   /* Close Button */
@@ -461,6 +464,7 @@
   
   </body>
 </html>
+
 
 
 
