@@ -409,36 +409,7 @@
   </div>
 
 <script>
-  // Modal elements
-  const modal = document.getElementById("imgModal");
-  const modalImg = document.getElementById("modalImg");
-  const closeBtn = document.getElementById("modalCloseBtn");
-
-  // Cover ALL images inside table (including multi-image cells)
-  document.querySelectorAll("table img").forEach(img => {
-    img.addEventListener("click", () => {
-      modal.classList.add("show");
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-    });
-  });
-
-  // Close popup on X click
-  closeBtn.onclick = () => {
-    modal.classList.remove("show");
-    modalImg.src = "";
-    modalImg.alt = "";
-  };
-
-  // Close when clicking outside image (on modal background)
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.remove("show");
-      modalImg.src = "";
-      modalImg.alt = "";
-    }
-  });
-
+  
    function openModal(imgElement) {
       document.getElementById("myModal").style.display = "flex";
       document.getElementById("modalImg").src = imgElement.src;
@@ -452,16 +423,12 @@
       }
     }
 
-    // Allow ESC key to close
-    document.addEventListener("keydown", function(event) {
-      if (event.key === "Escape") {
-        document.getElementById("myModal").style.display = "none";
-      }
-    });
+  
 </script>
   
   </body>
 </html>
+
 
 
 
